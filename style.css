@@ -361,6 +361,7 @@ html, body{
     top: 20%;
     background-color: transparent;
     background-size: cover;
+    display:none;
     pointer-events: none;
 }
 .image-container-img img{
@@ -368,6 +369,7 @@ html, body{
     width: 100%;
     object-fit: cover;
     border-radius: 10px;
+    display:none;
     pointer-events: none;
 }
 .image-container-video{
