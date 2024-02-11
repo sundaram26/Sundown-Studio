@@ -668,9 +668,12 @@ html, body{
 }
 .email-content input::placeholder{
     font-size: 1rem;
+    font-weight: 200;
+    color: #a69a9ad2;
 }
 .arrow{
     font-size: 2rem;
+    color: #a69a9ad2;
 }
 .footer-middle{
     height: 45%;
