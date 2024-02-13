@@ -100,28 +100,79 @@ colorFontHeadings.forEach(ele =>{
 
 
 function swiperAnimation(){
-    var swiper = new Swiper(".swiper-container", {
-        slidesPerView: 4,
-        spaceBetween: 30,
-        keyboard: {
-          enabled: true,
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-    });
+    if(window.innerWidth<450){
+        var swiper = new Swiper(".swiper-container", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            keyboard: {
+              enabled: true,
+            },
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+            },
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+        });
+    }
+    else if(window.innerWidth<750){
+        var swiper = new Swiper(".swiper-container", {
+            slidesPerView: 2,
+            spaceBetween: 20,
+            keyboard: {
+              enabled: true,
+            },
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+            },
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+        });
+    }
+    else if(window.innerWidth<950){
+        var swiper = new Swiper(".swiper-container", {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            keyboard: {
+              enabled: true,
+            },
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+            },
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+        });
+    }
+    else{
+        var swiper = new Swiper(".swiper-container", {
+            slidesPerView: 4,
+            spaceBetween: 20,
+            keyboard: {
+              enabled: true,
+            },
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+            },
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+        });
+    }
 }
 
 swiperAnimation()
 
-
-// const cursorStyle = document.querySelector('.swiper-box')
-// console.log(cursorStyle)
+console.log(window.innerWidth)
 document.addEventListener('DOMContentLoaded', function() {
     let cursor = document.querySelector('.cursor');
   
@@ -129,14 +180,72 @@ document.addEventListener('DOMContentLoaded', function() {
         cursor.style.top = (e.clientY - cursor.offsetHeight / 2) + 'px';
         cursor.style.left = (e.clientX - cursor.offsetWidth / 2) + 'px';
     });
-  
-    const cursorStyle = document.querySelector('.swiper-container');
-  
-    cursorStyle.addEventListener('mouseenter', function() {
-        cursor.style.opacity = 1;
-    });
-  
-    cursorStyle.addEventListener('mouseleave', function() {
-        cursor.style.opacity = 0;
-    });
+    if(window.innerWidth<950){
+        const cursorStyle = document.querySelector('.swiper-container');
+      
+        cursorStyle.addEventListener('mouseenter', function() {
+            cursor.style.opacity = 0;
+        });
+      
+        cursorStyle.addEventListener('mouseleave', function() {
+            cursor.style.opacity = 0;
+        });
+    }
+    else{
+        const cursorStyle = document.querySelector('.swiper-container');
+      
+        cursorStyle.addEventListener('mouseenter', function() {
+            cursor.style.opacity = 1;
+        });
+      
+        cursorStyle.addEventListener('mouseleave', function() {
+            cursor.style.opacity = 0;
+        });
+    }
+    
 });
+
+
+
+
+function menuAnimation() {
+    let menu = document.querySelector(".nav h3")
+    console.log(menu)
+    let full = document.querySelector(".full-src")
+    let navimg = document.querySelector(".nav img")
+    let flag = 0
+    menu.addEventListener("click", function () {
+        if (flag == 0) {
+            full.style.top = 0
+            navimg.style.opacity = 0
+            flag = 1
+            console.log('iMWorking')
+        } else {
+            full.style.top = "-100%"
+            navimg.style.opacity = 1
+            flag = 0
+        }
+    })
+}
+menuAnimation()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
