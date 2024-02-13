@@ -89,6 +89,36 @@ html, body{
 .nav-part2 h4:hover a{
     color: white;
 }
+.nav h3{
+    color: #000000bb;
+    z-index: 999;
+    padding: 2vw 4vw;
+    border: 1px solid #0000003c;
+    border-radius: 50px;
+    font-size: 1rem;
+    word-spacing: 1vw;
+    font-weight: 200;
+    color: #000000bb;
+    display: none;
+}
+.full-src {
+    height: 100vh;
+    width: 100%;
+    background-color: #00000070;
+    position: fixed;
+    z-index: 99;
+    top: -110%;
+    transition: all ease 0.5s;
+}
+
+.full-div1 {
+    height: 60%;
+    width: 100%;
+    background-color: #EFEAE3;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+}
 
 /* hero-section */
 .center{
@@ -106,8 +136,8 @@ html, body{
     line-height: 2vw;
 }
 .center h1{
-    font-size: 10.5vw;
-    line-height: 8.5vw;
+    font-size: 11.5vw;
+    line-height: 9.5vw;
     text-align: right;
     padding-right: 1vw;
 }
@@ -119,6 +149,7 @@ html, body{
     border-radius: 25px;
     margin-top: 4vw;
     position: relative;
+    object-fit: cover;
 }
 
 /* video backgound animation */
@@ -242,9 +273,9 @@ html, body{
     z-index: 9;
 }
 .page2-bottom h1{
-    font-size: 4vw;
-    width: 60%;
-    line-height: 4vw;
+    font-size: 4.5vw;
+    width: 65%;
+    line-height: 4.5vw;
 }
 .img-div{
     width: 21%;
@@ -293,19 +324,18 @@ html, body{
 .page3-heading{
     height: 150px;
     width: 100%;
+    position: relative;
     display: flex;
     align-items: center;
     padding: 0 2vw;
+    font-weight: 200;
 }
 .point-circle{
-    height: 0.5vw;
-    width: 0.5vw;
+    height: 1vw;
+    width: 1vw;
     border-radius: 50%;
     background-color: #fe420a;
-    margin-right: 0.5vw;
-}
-.page3-heading{
-    font-weight: 200;
+    margin-right: 1vw;
 }
 
 /* image appearing on hover */
@@ -351,7 +381,22 @@ html, body{
 .elem:hover .overlay{
     top: 0;
 }
-
+.elem img{
+    opacity: 0;
+    height: 80%;
+    width: 100%;
+    position: absolute;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.elem video{
+    opacity: 0;
+    height: 80%;
+    width: 100%;
+    position:absolute;
+    border-radius: 10px;
+    object-fit: cover;
+}
 .image-container-img{
     height: 30vw;
     width: 25vw;
@@ -396,7 +441,7 @@ html, body{
 
 .page3 button{
     height: 3vw;
-    width: 12vw;
+    width: 11vw;
     padding: 1vw;
     margin-left: 2vw;
     margin-top: 4vw;
@@ -458,6 +503,9 @@ html, body{
     align-items: center;
     justify-content: center;
 }
+.inside-left-black-box{
+    width: 90%;
+}
 .top-left{
     color: #8a7e6e;
     display: flex;
@@ -476,16 +524,17 @@ html, body{
 }
 .bottom-left{
     height: 15vw;
-    width: 32vw;
-    font-size: 1.1rem;
+    width: 100%;
+    font-size: 1rem;
     font-weight: 200;
-    line-height: 1.5vw;
+    line-height: 2vw;
+    text-align: left;
     color: #EFEAE3;
-    padding: 3vw 3vw 0 5vw;
+    padding: 3vw 0;
 }
 .headings{
     line-height: 5vw;
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     font-weight: 600;
     cursor: pointer;
 }
@@ -507,9 +556,10 @@ html, body{
 
 /* swiper */
 .swiper-box{
-    height: 90vh;
+    height: 110vh;
     width: 100%;
     margin-top: 8vw;
+    padding-left: 2vw;
 }
 .swiper-container{
     height: 60vh;
@@ -521,12 +571,13 @@ html, body{
 }
 
 .swiper-slide{
-    height: 55vh;
-    width: 20vw;
+    min-height: 40vh;
+    width: 30vw;
+    overflow-x: hidden;
     font-size: 1.1rem;
     font-weight: 200;
-    line-height: 1.5vw;
-    margin: 3vw;
+    line-height: 2vw;
+    margin: 3vw 0;
     padding: 2vw;
     border-left: 1px solid #0000003c;
 }
@@ -580,6 +631,7 @@ html, body{
     width: 120%;
     top: -10vw;
     left: 0;
+    overflow-x: hidden;
     position: absolute;
     background-color: #fe420a;
     filter:blur(50px);
@@ -748,6 +800,440 @@ html, body{
         width: 3.7vw;
     }
 }
+
+
+@media (max-width:1150px) {
+    .center{
+        height: 75vh;
+        padding: 4vw 0;
+    }
+    .center h1{
+        font-size: 13vw;
+        line-height: 11vw;
+    }
+    .hero-shape{
+        top: 80vh;
+    }
+    .point-circle{
+        height: 1vw;
+        width: 1vw;
+        border-radius: 50%;
+        background-color: #fe420a;
+        margin-right: 1vw;
+    }
+    .page3 button{
+        height: 4vw;
+        width: 15vw;
+    }
+}
+
+
+
+@media (max-width:950px) {
+    .page1{
+        padding: 0 3vw;
+    }
+    .nav{
+        padding: 3vw 0;
+    }
+    .nav-part2 h4{
+        padding: 12px 27px;
+    }
+    .center{
+        height: 55vh;
+        padding: 4vw 0;
+    }
+
+    .hero-shape{
+        top: 60vh;
+    }
+    .left h3{
+        width: 28vw;
+        font-size: 2vw;
+
+    }
+    .page1 video{
+        margin-top: 6vw;
+        border-radius: 20px;
+    }
+    .hero-1{
+        filter: blur(10px);
+    }
+    .hero-2{
+        filter: blur(10px);
+        animation-duration: 3s;
+    }
+    .hero-3{
+        filter: blur(10px);
+        animation-duration: 3s;
+    }
+
+    /* page2 */
+    .page2{
+        padding: 8vw 0;
+    }
+    .page2-bottom{
+        height: 60vh;
+        padding: 6vw;
+    }
+    .page2-bottom h1{
+        font-size: 4.8vw;
+        width: 65%;
+    }
+    .img-div{
+        width: 28%;
+        margin-top: 25vw;
+    }
+    .page2 .back-circle{
+        height: 45vw;
+        width: 45vw;
+        /* top: 60%; */
+        left: 15%;
+        filter: blur(25px);
+    }
+    .page3-heading{
+        height: 80px;
+        font-size: 0.8rem;
+        align-items: start;
+        margin-top: 8vw;
+    }
+    .point-circle{
+        height: 1.1vw;
+        width: 1.1vw;
+        margin-top: 0.3vw;
+    }
+    .elem-container{
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 2.6%;
+    }
+    .elem{
+        height: 90vh;
+        width: 47%;
+        margin: 2.5% 2.5% 2.5% 0;
+        padding: 0;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+    }
+    .elem .overlay{
+        display: none;
+    }
+    .elem img{
+        opacity: 1;
+        position: relative;   
+    }
+    .elem video{
+        opacity: 1; 
+        position: relative;  
+    }
+    .elem h2{
+        font-size: 3.5vw;
+        margin: 1vw 0;
+    }
+    .right-elem h4{
+        font-size: 1.8vw;
+        text-align: left;
+    }
+    .right-elem p{
+        font-size: 1.8vw;
+        text-align: left;
+    }
+
+    .image-container-img,
+    .image-container-video{
+        opacity: 0;
+    }
+    .image-container-img img{
+        opacity: 0;
+    }
+    .image-container-video video{
+        opacity: 0;
+    }
+    .page3 button{
+        height: 6vw;
+        width: 19vw;
+    }
+    .page4{
+        padding: 8vw 2vw;
+    }
+    
+    .swiper-box{
+        height: 70vh;
+        margin-top: 10vw;
+    }
+    .swiper-slide{
+        height: 35vh;
+        width: 35vw;
+        font-size: 0.8rem;
+        line-height: 2vw;
+        padding: 1.5vw;
+    }
+}
+
+@media (max-width:850px) {
+    .elem{
+        height: 85vh;
+    }
+    .black-box{
+        height: 150vh;
+        border-radius: 20px;
+        flex-direction: column;
+    }
+    .left-black-box{
+        height: 40%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .inside-left-black-box{
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+    .line{
+        height: 18vh;
+        width: 0.25vw;
+    }
+    .headings{
+        line-height: 6vh;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+    .bottom-left{
+        width: 80%;
+        font-size: 0.8rem;
+        line-height: 2vh;
+    }
+    .right-black-box{
+        width: 100%;
+        height: 60%;
+    }
+    .swiper-slide{
+        width: 50vh;
+        line-height: 2vh;
+    }
+}
+
+@media (max-width:750px) {
+    .center{
+        height: 50vh;
+        padding: 4vw 0;
+    }
+    .center h1{
+        font-size: 14vw;
+        line-height: 12vw;
+    }
+    .hero-shape{
+        top: 55vh;
+    }
+    .elem{
+        height: 70vh;
+    }
+    .point-circle{
+        height: 1.1vw;
+        width: 1.1vw;
+        margin-top: 0.5vw;
+    }
+    .page3 button{
+        height: 6vh;
+        width: 19vh;
+    }
+    
+}
+
+@media (max-width:600px) {
+    .nav img {
+        transition: all ease 0.2s;
+        height: 9vh;
+        width: 25vw;
+    }
+
+    .nav-part2 {
+        display: none;
+    }
+
+    .nav h3 {
+        display: block;
+    }
+    .center{
+        height: 70vh;
+        flex-direction: column-reverse;
+    }
+    .left{
+        align-self: start;
+    }
+    .left h3{
+        width: 90%;
+        font-size: 3vh;
+        line-height: 3vh;
+        padding-bottom: 8vw;
+        
+    }
+    .center h1{
+        font-size: 22vw;
+        line-height: 18vw;
+        padding-top: 7vw;
+    }
+    .page1 video{
+        height: 70vh;
+    }
+    .hero-shape{
+        top: 75vh;
+    }
+    .page2-bottom{
+        height: 90vh;
+        flex-direction: column;
+        justify-content: start;
+    }
+    .page2-bottom h1{
+        font-size: 4vh;
+        width: 100%;
+        line-height: 4vh;
+        padding-top: 5vh;
+    }
+    .img-div{
+        align-self: flex-start;
+        width: 65%;
+        margin-top: 10vh;
+    }
+    .page2 .back-circle{
+        height: 50vw;
+        width: 50vw;
+        top: 32%;
+        /* right: 0%; */
+        left: 40%;
+    }
+    .page3-heading{
+        height: 50px;
+    }
+    .point-circle{
+        height: 1.5vw;
+        width: 1.5vw;
+        margin-top: 0.5vw;
+    }
+    .elem{
+        height: 70vh;
+        width: 100%;
+    }
+    .elem h2{
+        font-size: 4vh;
+    }
+    .right-elem h4{
+        font-size: 1.8vh;
+    }
+    .right-elem p{
+        font-size: 1.8vh;
+    }
+    .inside-left-black-box{
+        width: 80%;
+    }
+    .bottom-left{
+        width: 80%;
+    }
+}
+
+
+@media (max-width:400px) {
+    .left h3{
+        padding-bottom: 10vh;
+    }
+    .black-box{
+        height: 120vh;
+    }
+    .inside-left-black-box{
+        width: 90%;
+    }
+    .bottom-left{
+        width: 90%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
