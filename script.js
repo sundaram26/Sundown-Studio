@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
             const img = el.getAttribute('img');
             if(imgArray[img]){
                 imageContainerImg.style.display = 'block';
-                
                 image.style.display = 'block';
                 image.src = imgArray[img];
             }
@@ -210,7 +209,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function menuAnimation() {
     let menu = document.querySelector(".nav h3")
-    console.log(menu)
+    // console.log(menu)
     let full = document.querySelector(".full-src")
     let navimg = document.querySelector(".nav img")
     let flag = 0
@@ -219,9 +218,9 @@ function menuAnimation() {
             full.style.top = 0
             navimg.style.opacity = 0
             flag = 1
-            console.log('iMWorking')
+            // console.log('iMWorking')
         } else {
-            full.style.top = "-100%"
+            full.style.top = "-150%"
             navimg.style.opacity = 1
             flag = 0
         }
